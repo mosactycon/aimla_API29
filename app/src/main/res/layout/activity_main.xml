@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="-60dp"
+
+        >
+        <Button
+            android:id="@+id/face_recognition_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/square_button"
+            android:text="Deteksi Wajah"
+            android:textAllCaps="false"
+            android:textSize="14dp"
+            />
+
+        <Button
+            android:id="@+id/object_detection_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/square_button"
+            android:text="Deteksi Objek"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            />
+
+        <Button
+            android:id="@+id/sign_language_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/square_button"
+            android:text="Artikan Bahasa Isyarat"
+            android:textAllCaps="false"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+
+        >
+        <Button
+            android:id="@+id/image_to_text_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/square_button"
+            android:text="Pindai Tulisan"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            />
+        <Button
+            android:id="@+id/code_scanner_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/square_button"
+            android:text="Pindai QR / barcode"
+            android:textAllCaps="false"
+            android:textSize="14dp"
+            />
+
+        <Button
+            android:id="@+id/facial_expression_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/square_button"
+            android:text="Tebak Ekspresi Wajah"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="150dp"-->
+
+<!--        >-->
+<!--        <Button-->
+<!--            android:id="@+id/animal_recognition_button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:background="@drawable/square_button"-->
+<!--            android:text="Kenali Satwa"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textSize="16dp"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:background="@drawable/square_button"-->
+<!--            android:text="Tebak Usia"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textSize="14dp"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:id="@+id/camera_button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:background="@drawable/square_button"-->
+<!--            android:text="Kamera"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textSize="16dp" />-->
+
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/camera_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/square_button"
+            android:text="Kamera"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            android:src="@drawable/camera"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</FrameLayout>
