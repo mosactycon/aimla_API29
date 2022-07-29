@@ -1,17 +1,35 @@
 package com.example.aimla;
 
+import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
+
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.opencv.android.OpenCVLoader;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     static {
         if(OpenCVLoader.initDebug()){
             Log.d("MainActivity: ","Opencv is loaded");
@@ -21,20 +39,32 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private ImageView camera_button;
-//    private Button camera_button;
-    private Button object_detection_button;
-    private Button sign_language_menu_button;
-    private Button image_to_text_button;
-    private Button code_scanner_button;
-    private Button facial_expression_button;
-    private Button face_recognition_button;
-//    private Button animal_recognition_button;
+    private com.google.android.material.bottomnavigation.BottomNavigationView bottom_navigation_view;
+    private com.google.android.material.floatingactionbutton.FloatingActionButton camera_button;
+    private ImageButton object_detection_button;
+    private ImageButton sign_language_menu_button;
+    private ImageButton image_to_text_button;
+    private ImageButton code_scanner_button;
+    private ImageButton facial_expression_button;
+    private ImageButton face_recognition_button;
+    private MenuItem item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageSlider imageSlider=findViewById(R.id.slider);
+        List<SlideModel> slideModels=new ArrayList<>();
+        slideModels.add(new SlideModel(R.drawable.face_recognition_banner));
+        slideModels.add(new SlideModel(R.drawable.object_recognition_banner));
+        slideModels.add(new SlideModel(R.drawable.sign_language_banner));
+        slideModels.add(new SlideModel(R.drawable.expression_recognition_banner));
+
+        imageSlider.setImageList(slideModels,true);
+
+        bottom_navigation_view=findViewById(R.id.bottom_navigation_view);
+        bottom_navigation_view.setOnNavigationItemSelectedListener(this);
 
         camera_button=findViewById(R.id.camera_button);
         camera_button.setOnClickListener(new View.OnClickListener() {
@@ -92,14 +122,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        animal_recognition_button=findViewById(R.id.animal_recognition_button);
-//        animal_recognition_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, animalRecognitionActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
-//            }
-//        });
-
-
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.home:
+                return true;
+
+            case R.id.about:
+                startActivity(new Intent(MainActivity.this, aboutUs.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_NO_ANIMATION));
+                return true;
+        }
+
+        return false;
+    }
+
+
 }

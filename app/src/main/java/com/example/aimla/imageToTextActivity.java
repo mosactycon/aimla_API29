@@ -65,6 +65,8 @@ public class imageToTextActivity extends Activity implements CameraBridgeViewBas
     private Bitmap bitmap=null;
     private TextToSpeech textToSpeech;
     private Button read_text_button;
+    private Context context;
+
 
     private BaseLoaderCallback mLoaderCallback =new BaseLoaderCallback(this) {
         @Override
@@ -115,11 +117,13 @@ public class imageToTextActivity extends Activity implements CameraBridgeViewBas
         read_text_button=findViewById(R.id.read_text_button);
         read_text_button.setVisibility(View.GONE);
 
+
         textToSpeech=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 if(status != TextToSpeech.ERROR) {
-                    textToSpeech.setLanguage(Locale.ENGLISH);
+                    textToSpeech.setLanguage(new Locale("id","ID"));
+
                 }
             }
         });

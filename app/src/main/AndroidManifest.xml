@@ -2,45 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aimla">
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.aimla">
-        <activity
-            android:name="com.example.aimla.faceRecognitionActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.aimla.facialExpressionActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.aimla.storageRecognitionActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.aimla.imageToTextActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.aimla.signLanguageActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.aimla.GalleryActivity"
-            android:exported="false" />
-        <activity android:name="com.example.aimla.CameraActivity" />
-        <activity android:name="com.example.aimla.objectDetectorActivity" />
-        <activity
-            android:name="com.example.aimla.codeScannerActivity"
-            android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name="com.example.aimla.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
     <uses-feature
         android:name="android.hardware.camera.front"
         android:required="false" />
@@ -50,14 +11,60 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.aimla">
+        <activity
+            android:name=".aboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".splashScreen"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".faceRecognitionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".facialExpressionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".storageRecognitionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".imageToTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".signLanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GalleryActivity"
+            android:exported="false" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".objectDetectorActivity" />
+        <activity
+            android:name=".codeScannerActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity android:name=".MainActivity"></activity>
+    </application>
 
 </manifest>

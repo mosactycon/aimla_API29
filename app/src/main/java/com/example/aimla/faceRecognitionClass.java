@@ -109,7 +109,7 @@ public class faceRecognitionClass {
             String face_name=get_face_name(read_face);
             Imgproc.putText(mat_image,""+face_name,
                     new Point((int)faceArray[i].tl().x+10, (int)faceArray[i].tl().y+20),
-                    1,1.5,new Scalar(255,255,255,150),2);
+                    1,1.5,new Scalar(0,255,0,255),2);
 
         }
         Core.flip(mat_image.t(),mat_image,0);

@@ -243,9 +243,9 @@ public class signLanguageClass {
                 String sign_val=get_alphabets(output_class_value[0][0]);
                 current_text=sign_val;
                 //              input/ output           text            starting point              font size                      text color(pink)
-                Imgproc.putText(rotated_mat_image,""+sign_val,new Point(x1+10, y1+40),2,1.5,new Scalar(255, 63, 128, 340),2);
+                Imgproc.putText(rotated_mat_image,""+sign_val,new Point(x1+10, y1+40),2,1.5,new Scalar(0,255,0,255),2);
                 // draw rectangle in Original frame //  starting point    // ending point of box  // color of box       thickness
-                Imgproc.rectangle(rotated_mat_image,new Point(x1,y1),new Point(x2,y2),new Scalar(62, 80, 180, 232),2);
+                Imgproc.rectangle(rotated_mat_image,new Point(x1,y1),new Point(x2,y2),new Scalar(0,255,0,255),2);
                 // write text on frame
                 // string of class name of object  // starting point                         // color of text           // size of text
                 //

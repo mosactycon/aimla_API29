@@ -139,10 +139,10 @@ public class objectDetectorClass {
                 float right=(float) Array.get(box1,3)*width;
                 final_text=labelList.get(((int)class_value));
                 // draw rectangle in Original frame //  starting point    // ending point of box  // color of box       thickness
-                Imgproc.rectangle(rotated_mat_image,new Point(left,top),new Point(right,bottom),new Scalar(62, 80, 180, 232),2);
+                Imgproc.rectangle(rotated_mat_image,new Point(left,top),new Point(right,bottom),new Scalar(0,255,0,255),2);
                 // write text on frame
                 // string of class name of object  // starting point                         // color of text           // size of text
-                Imgproc.putText(rotated_mat_image,labelList.get((int) class_value),new Point(left,bottom),3,1,new Scalar(255, 63, 128, 340),2);
+                Imgproc.putText(rotated_mat_image,labelList.get((int) class_value),new Point(left,bottom),3,1,new Scalar(0,255,0,255),2);
             }
 
         }
