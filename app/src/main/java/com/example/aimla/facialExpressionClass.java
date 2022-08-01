@@ -42,7 +42,7 @@ public class facialExpressionClass {
         INPUT_SIZE=inputSize;
         Interpreter.Options options=new Interpreter.Options();
         gpuDelegate=new GpuDelegate();
-        options.addDelegate(gpuDelegate);
+//        options.addDelegate(gpuDelegate);
         options.setNumThreads(4);
         interpreter=new Interpreter(loadModelFile(assetManager,modelPath),options);
 
