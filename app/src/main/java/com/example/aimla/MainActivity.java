@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         ImageSlider imageSlider=findViewById(R.id.slider);
         List<SlideModel> slideModels=new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.face_recognition_banner));
-        slideModels.add(new SlideModel(R.drawable.object_recognition_banner));
         slideModels.add(new SlideModel(R.drawable.sign_language_banner));
         slideModels.add(new SlideModel(R.drawable.expression_recognition_banner));
+        slideModels.add(new SlideModel(R.drawable.object_recognition_banner));
 
         imageSlider.setImageList(slideModels,true);
 

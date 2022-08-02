@@ -9,19 +9,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     >
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="30dp"-->
-<!--        android:layout_gravity="top"-->
-<!--        >-->
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Aimla"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="20dp"/>-->
-<!--    </FrameLayout>-->
-    
+
     <com.denzcoskun.imageslider.ImageSlider
         android:layout_width="match_parent"
         android:layout_height="190dp"
@@ -53,18 +41,8 @@
             android:src="@drawable/face_recognition_icon"
             android:background="@drawable/custom_image_button"
             android:elevation="10dp"
-
             />
-        <ImageButton
-            android:id="@+id/object_detection_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:src="@drawable/object_recognition_icon"
-            android:background="@drawable/custom_image_button"
-            android:elevation="10dp"
 
-            />
         <ImageButton
             android:id="@+id/sign_language_button"
             android:layout_width="100dp"
@@ -73,7 +51,16 @@
             android:src="@drawable/sign_language_icon"
             android:background="@drawable/custom_image_button"
             android:elevation="10dp"
+            />
 
+        <ImageButton
+            android:id="@+id/facial_expression_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/facial_expression_icon"
+            android:background="@drawable/custom_image_button"
+            android:elevation="10dp"
             />
 
     </LinearLayout>
@@ -93,18 +80,19 @@
            android:layout_margin="15dp"
            android:textAlignment="center"
            android:text="AimlaFace" />
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:textAlignment="center"
-            android:text="AimlaObj"/>
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:textAlignment="center"
             android:text="AimlaSign"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textAlignment="center"
+            android:text="AimlaEmote"/>
 
     </LinearLayout>
 
@@ -118,15 +106,15 @@
 
         >
         <ImageButton
-            android:id="@+id/facial_expression_button"
+            android:id="@+id/object_detection_button"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="15dp"
-            android:src="@drawable/facial_expression_icon"
+            android:src="@drawable/object_recognition_icon"
             android:background="@drawable/custom_image_button"
             android:elevation="10dp"
-
             />
+
 
         <ImageButton
             android:id="@+id/code_scanner_button"
@@ -166,7 +154,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:textAlignment="center"
-            android:text="AimlaEmote"/>
+            android:text="AimlaObj"/>
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"

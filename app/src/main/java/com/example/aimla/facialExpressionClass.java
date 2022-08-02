@@ -78,7 +78,6 @@ public class facialExpressionClass {
         Imgproc.cvtColor(mat_image,grayscaleImage,Imgproc.COLOR_RGBA2GRAY);
         height=grayscaleImage.height();
         width=grayscaleImage.width();
-
         int absoluteFaceSize=(int)(height*0.1);
         MatOfRect faces=new MatOfRect();
         if(cascadeClassifier !=null){
@@ -99,8 +98,9 @@ public class facialExpressionClass {
             Bitmap bitmap=null;
             bitmap=Bitmap.createBitmap(cropped_rgba.cols(),cropped_rgba.rows(),Bitmap.Config.ARGB_8888);
             Utils.matToBitmap(cropped_rgba,bitmap);
-            Bitmap scaledBitmap=Bitmap.createScaledBitmap(bitmap,48,48,false);
+            Bitmap scaledBitmap=Bitmap.createScaledBitmap(bitmap,INPUT_SIZE,INPUT_SIZE,false);
             ByteBuffer byteBuffer=convertBitmapToByteBuffer(scaledBitmap);
+
             float[][] emotion=new float[1][1];
             interpreter.run(byteBuffer,emotion);
 
@@ -145,6 +145,7 @@ public class facialExpressionClass {
         }
         return val;
     }
+
 
     private ByteBuffer convertBitmapToByteBuffer(Bitmap scaledBitmap) {
         ByteBuffer byteBuffer;
