@@ -10,19 +10,50 @@
     android:gravity="center"
     >
 
-    <com.denzcoskun.imageslider.ImageSlider
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        app:auto_cycle="true"
-        app:delay="0"
-        app:period="3000"
-        app:placeholder="@color/black"
-        app:error_image="@color/blue_1"
-        android:id="@+id/slider"
-        app:corner_radius="20"
-        android:layout_margin="20dp"
-        android:background="@drawable/custom_image_button"
-        android:elevation="10dp"/>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logo"
+            android:id="@+id/logo"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="1dp"
+            android:layout_toEndOf="@+id/logo"
+            android:text="imla"
+            android:textColor="@color/blue_1"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
+        <com.denzcoskun.imageslider.ImageSlider
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            app:auto_cycle="true"
+            app:delay="0"
+            app:period="3000"
+            app:placeholder="@color/black"
+            app:error_image="@color/blue_1"
+            android:id="@+id/slider"
+            app:corner_radius="20"
+            android:layout_margin="20dp"
+            android:background="@drawable/custom_image_button"
+            android:elevation="10dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +61,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="-150dp"
+        android:layout_marginTop="-30dp"
 
         >
         <ImageButton
@@ -71,15 +102,15 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="-5dp"
+        android:layout_marginTop="115dp"
 
         >
-       <TextView
-           android:layout_width="100dp"
-           android:layout_height="wrap_content"
-           android:layout_margin="15dp"
-           android:textAlignment="center"
-           android:text="AimlaFace" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textAlignment="center"
+            android:text="AimlaFace" />
 
         <TextView
             android:layout_width="100dp"
@@ -102,7 +133,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="310dp"
 
         >
         <ImageButton
@@ -146,7 +177,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="450dp"
 
         >
         <TextView
@@ -173,32 +204,54 @@
     </LinearLayout>
 
 
-        <com.google.android.material.bottomappbar.BottomAppBar
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_appbar"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabCradleVerticalOffset="10dp"
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:id="@+id/bottom_appbar"
-            app:fabCradleMargin="10dp"
-            app:fabCradleRoundedCornerRadius="10dp"
-            app:fabCradleVerticalOffset="10dp"
-            >
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bottom_navigation_view"
-                android:layout_marginRight="16dp"
-                app:menu="@menu/bottom_nav_menu"
-                android:background="@drawable/transparent_background"
-                android:animateLayoutChanges="false"
-                />
-        </com.google.android.material.bottomappbar.BottomAppBar>
+            android:id="@+id/bottom_navigation_view"
+            android:layout_marginRight="16dp"
+            app:menu="@menu/bottom_nav_menu"
+            android:background="@drawable/transparent_background"
+            android:animateLayoutChanges="false"
+            />
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera_button"
+        android:src="@drawable/camera"
+        app:layout_anchor="@id/bottom_appbar"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/camera_button"
-            android:src="@drawable/camera"
-            app:layout_anchor="@id/bottom_appbar"
-            />
-
+            android:text="Beranda"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="97dp"
+            android:textColor="@color/blue_1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tentang"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="97dp"
+            android:textColor="@color/grey"/>
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

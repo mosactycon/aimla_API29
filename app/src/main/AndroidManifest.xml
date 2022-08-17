@@ -30,11 +30,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.aimla">
         <activity
-            android:name=".aboutUs"
+            android:name=".aboutActivity"
             android:exported="false" />
         <activity
-            android:name=".splashScreen"
-            android:theme="@style/Theme.Design.NoActionBar">
+            android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

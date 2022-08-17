@@ -30,6 +30,9 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
     private CameraBridgeViewBase mOpenCvCameraView;
     private objectDetectorClass objectDetectorClass;
     private Button text_speech_button;
+    private Button language_english;
+    private Button language_arab;
+    private Button language_indo;
 
     private BaseLoaderCallback mLoaderCallback =new BaseLoaderCallback(this) {
         @Override
@@ -43,7 +46,6 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
                 default:
                 {
                     super.onManagerConnected(status);
-
                 }
                 break;
             }
@@ -73,10 +75,12 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
         text_speech_button=findViewById(R.id.text_speech_button);
+        language_english=findViewById(R.id.language_english);
+        language_indo=findViewById(R.id.language_indo);
 
         try{
             // input size is 300 for this model
-            objectDetectorClass=new objectDetectorClass(objectDetectorActivity.this,text_speech_button,getAssets(),"ssd_mobilenet.tflite","labelmap.txt",300);
+            objectDetectorClass=new objectDetectorClass(objectDetectorActivity.this,text_speech_button,language_english,language_indo, getAssets(), "ssd_mobilenet.tflite","labelmap.txt", "labelmap_arab.txt","labelmap_indo.txt",300);
             Log.d("MainActivity","Model is successfully loaded");
         }
         catch (IOException e){
@@ -135,6 +139,4 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
         return out;
 //        return mRgba;
     }
-
 }
-

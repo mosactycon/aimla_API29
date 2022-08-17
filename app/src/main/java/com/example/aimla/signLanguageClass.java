@@ -238,6 +238,7 @@ public class signLanguageClass {
                 Bitmap scaledBitmap1=Bitmap.createScaledBitmap(bitmap1,Classification_Input_size,Classification_Input_size,false);
                 ByteBuffer byteBuffer1=convertBitmapToByteBuffer1(scaledBitmap1);
                 float[][] output_class_value=new float[1][1];
+//                float[][] output_class_value=new float[1][25];
                 interpreter2.run(byteBuffer1,output_class_value);
                 Log.d("signLanguageClass", "output_class_value: "+output_class_value[0][0]);
                 String sign_val=get_alphabets(output_class_value[0][0]);

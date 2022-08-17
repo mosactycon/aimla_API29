@@ -30,14 +30,5 @@ public class splashScreen extends AppCompatActivity {
                 finish();
             }
         },waktu_loading);
-
-//        final Handler handler = new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-//                finish();
-//            }
-//        }, 3000L); //3000 L = 3 detik
     }
 }

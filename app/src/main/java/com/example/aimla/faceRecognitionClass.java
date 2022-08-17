@@ -102,6 +102,7 @@ public class faceRecognitionClass {
             ByteBuffer byteBuffer=convertBitmapToByteBuffer(scaledBitmap);
 
             float[][] face_value=new float[1][1];
+//            float[][] face_value=new float[1][25];
             interpreter.run(byteBuffer,face_value);
 
             Log.d("faceRecognitionClass","Out:"+Array.get(Array.get(face_value,0),0));
@@ -215,6 +216,87 @@ public class faceRecognitionClass {
         }
         return val;
     }
+
+//    private String get_face_name(float read_face) {
+//        String val="";
+//        if    (read_face >=-0.5 & read_face <0.5){
+//            val="A";
+//        }
+//        else if(read_face >=0.5 & read_face <1.5){
+//            val="B";
+//        }
+//        else if(read_face >=1.5 & read_face <2.5){
+//            val="C";
+//        }
+//        else if(read_face >=2.5 & read_face <3.5){
+//            val="D";
+//        }
+//        else if(read_face >=3.5 & read_face <4.5){
+//            val="E";
+//        }
+//        else if(read_face >=4.5 & read_face <5.5){
+//            val="F";
+//        }
+//        else if(read_face >=5.5 & read_face <6.5){
+//            val="G";
+//        }
+//        else if(read_face >=6.5 & read_face <7.5){
+//            val="H";
+//        }
+//        else if(read_face >=7.5 & read_face <8.5){
+//            val="I";
+//        }
+//        else if(read_face >=8.5 & read_face <9.5){
+//            val="J";
+//        }
+//        else if(read_face >=9.5 & read_face <10.5){
+//            val="K";
+//        }
+//        else if(read_face >=10.5 & read_face <11.5){
+//            val="L";
+//        }
+//        else if(read_face >=11.5 & read_face <12.5){
+//            val="M";
+//        }
+//        else if(read_face >=12.5 & read_face <13.5){
+//            val="N";
+//        }
+//        else if(read_face >=13.5 & read_face <14.5){
+//            val="O";
+//        }
+//        else if(read_face >=14.5 & read_face <15.5){
+//            val="P";
+//        }
+//        else if(read_face >=15.5 & read_face <16.5){
+//            val="Q";
+//        }
+//        else if(read_face >=16.5 & read_face <17.5){
+//            val="R";
+//        }
+//        else if(read_face >=17.5 & read_face <18.5){
+//            val="S";
+//        }
+//        else if(read_face >=18.5 & read_face <19.5){
+//            val="T";
+//        }
+//        else if(read_face >=19.5 & read_face <20.5){
+//            val="U";
+//        }
+//        else if(read_face >=20.5 & read_face <21.5){
+//            val="V";
+//        }
+//        else if(read_face >=21.5 & read_face <22.5){
+//            val="W";
+//        }
+//        else if(read_face >=22.5 & read_face <23.5){
+//            val="X";
+//        }
+//        else{
+//            val="Y";
+//        }
+//
+//        return val;
+//    }
 
 
     private ByteBuffer convertBitmapToByteBuffer(Bitmap scaledBitmap) {

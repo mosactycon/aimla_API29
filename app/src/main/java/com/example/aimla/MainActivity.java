@@ -1,22 +1,17 @@
 package com.example.aimla;
 
-import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
 
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -52,9 +47,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
-        ImageSlider imageSlider=findViewById(R.id.slider);
+        ImageSlider imageSlider=findViewById       (R.id.slider);
         List<SlideModel> slideModels=new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.face_recognition_banner));
         slideModels.add(new SlideModel(R.drawable.sign_language_banner));
@@ -64,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         imageSlider.setImageList(slideModels,true);
 
         bottom_navigation_view=findViewById(R.id.bottom_navigation_view);
+        bottom_navigation_view.setItemIconTintList(null);
+        bottom_navigation_view.setBackgroundTintList(null);
         bottom_navigation_view.setOnNavigationItemSelectedListener(this);
 
         camera_button=findViewById(R.id.camera_button);
@@ -130,11 +128,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.home:
-                return true;
-
             case R.id.about:
-                startActivity(new Intent(MainActivity.this, aboutUs.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_NO_ANIMATION));
+                startActivity(new Intent(MainActivity.this, aboutActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_NO_ANIMATION));
+
                 return true;
         }
 

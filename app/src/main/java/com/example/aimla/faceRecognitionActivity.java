@@ -96,25 +96,17 @@ public class faceRecognitionActivity extends Activity implements CameraBridgeVie
             }
         });
 
-        // this will load cascade classifier and model
-        // this only happen one time when you start CameraActivity
         try{
-            // input size of model is 96
+
             faceRecognitionClass=new faceRecognitionClass(getAssets(),
                     faceRecognitionActivity.this,
                     "face_recognition_model.tflite",
                     96);
 
-//            faceRecognitionClass=new com.example.aimla.faceRecognitionClass(getAssets(),
-//                    faceRecognitionActivity.this,
-//                    "face_recognition_model_pramod_96.tflite",
-//                    96);
-//
         }
         catch (IOException e){
             e.printStackTrace();
         }
-
 
     }
 

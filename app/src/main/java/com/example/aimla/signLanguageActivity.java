@@ -92,8 +92,9 @@ public class signLanguageActivity extends Activity implements CameraBridgeViewBa
             // Everything is working
             // Next tutorial series I will make sign language detection
             // bye
-            signLanguageClass=new signLanguageClass(signLanguageActivity.this, add_button,clear_button,change_text,text_speech_button,getAssets(),"hand_model.tflite","custom_label.txt",300,"sign_language_model_new.tflite",96);
+            signLanguageClass=new signLanguageClass(signLanguageActivity.this, add_button,clear_button,change_text,text_speech_button,getAssets(),"hand_model.tflite","custom_label.txt",300, "sign_language_model.tflite",96);
             Log.d("MainActivity","Model is successfully loaded");
+            //sign_language_model.tflite 96
         }
         catch (IOException e){
             Log.d("MainActivity","Getting some error");

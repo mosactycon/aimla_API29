@@ -89,7 +89,6 @@ public class facialExpressionClass {
 
         Rect[] faceArray=faces.toArray();
         for (int i=0;i<faceArray.length;i++){
-            //                input/output starting point ending point        color   R  G  B  alpha    thickness
             Imgproc.rectangle(mat_image,faceArray[i].tl(),faceArray[i].br(),new Scalar(0,255,0,255),2);
             Rect roi=new Rect((int)faceArray[i].tl().x,(int)faceArray[i].tl().y,
                     ((int)faceArray[i].br().x)-(int)(faceArray[i].tl().x),
@@ -110,7 +109,6 @@ public class facialExpressionClass {
             Imgproc.putText(mat_image,emotion_s+" ("+emotion_v+")",
                     new Point((int)faceArray[i].tl().x+10,(int)faceArray[i].tl().y+20),
                     1,1.5,new Scalar(0,255,0,255),2);
-            //      use to scale text      color     R G  B  alpha    thickness
 
         }
 

@@ -18,7 +18,31 @@
         android:id="@+id/top_linear_layout"
         android:gravity="center"
         >
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_margin="50dp"
+            android:background="@drawable/square2_button"
+            android:backgroundTint="@color/blue_1"
+            android:textColor="@color/white"
+            android:id="@+id/language_english"
+            android:text="English"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_margin="50dp"
+            android:background="@drawable/square2_button"
+            android:backgroundTint="@color/blue_1"
+            android:textColor="@color/white"
+            android:id="@+id/language_indo"
+            android:text="Indonesian"
+            android:textAllCaps="false"
+            />
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"

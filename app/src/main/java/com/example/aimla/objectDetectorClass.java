@@ -44,8 +44,10 @@ public class objectDetectorClass {
     private  int width=0;
     private String final_text="";
     private TextToSpeech textToSpeech;
+    private String language="";
 
-    objectDetectorClass(Context context, Button text_speech_button, AssetManager assetManager, String modelPath, String labelPath, int inputSize) throws IOException{
+
+    objectDetectorClass(Context context, Button text_speech_button,Button language_english,Button language_indo, AssetManager assetManager, String modelPath, String labelPath, String labelPathArab, String labelPathIndo, int inputSize) throws IOException{
         INPUT_SIZE=inputSize;
         Interpreter.Options options=new Interpreter.Options();
         gpuDelegate=new GpuDelegate();
@@ -59,18 +61,58 @@ public class objectDetectorClass {
             @Override
             public void onInit(int status) {
                 if(status !=TextToSpeech.ERROR){
-                    textToSpeech.setLanguage(Locale.ENGLISH);
+                    textToSpeech.setLanguage(new Locale("id","ID"));
                 }
             }
         });
+
+        language_english.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+                    labelList=loadLabelList(assetManager,labelPath);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                textToSpeech=new TextToSpeech(context, new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int status) {
+                        if(status !=TextToSpeech.ERROR){
+                            textToSpeech.setLanguage(Locale.ENGLISH);
+                        }
+                    }
+                });
+            }
+        });
+        language_indo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+                    labelList=loadLabelList(assetManager,labelPathIndo);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                textToSpeech=new TextToSpeech(context, new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int status) {
+                        if(status !=TextToSpeech.ERROR){
+                            textToSpeech.setLanguage(new Locale("id","ID"));
+                        }
+                    }
+                });
+            }
+        });
+
         text_speech_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textToSpeech.speak(final_text,TextToSpeech.QUEUE_FLUSH,null);
-
             }
         });
-
 
     }
 
@@ -115,6 +157,9 @@ public class objectDetectorClass {
         float[][][]boxes =new float[1][10][4];
         float[][] scores=new float[1][10];
         float[][] classes=new float[1][10];
+//        float[][] boxes =new float[1][25];
+//        float[][] scores=new float[1][25];
+//        float[][] classes=new float[1][25];
 
         output_map.put(0,boxes);
         output_map.put(1,classes);

@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/bottombar_home"
-        android:title="Beranda"/>
+        android:icon="@drawable/bottombar_home_colored"
+        android:title=""/>
     <item
         android:id="@+id/placeholder"
         android:title=""/>
     <item
         android:id="@+id/about"
         android:icon="@drawable/bottombar_dev"
-        android:title="Tentang"/>
+        android:title=""/>
 
 </menu>
