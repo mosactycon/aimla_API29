@@ -32,7 +32,7 @@ public class facialExpressionActivity extends Activity implements CameraBridgeVi
     private Mat mRgba;
     private Mat mGray;
     private CameraBridgeViewBase mOpenCvCameraView;
-    // call java class
+
     private facialExpressionClass facialExpressionClass;
     private ImageView flip_camera;
     private int mCameraId=0;
@@ -67,7 +67,7 @@ public class facialExpressionActivity extends Activity implements CameraBridgeVi
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         int MY_PERMISSIONS_REQUEST_CAMERA=0;
-        // if camera permission is not given it will ask for it on device
+
         if (ContextCompat.checkSelfPermission(facialExpressionActivity.this, Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_DENIED){
             ActivityCompat.requestPermissions(facialExpressionActivity.this, new String[] {Manifest.permission.CAMERA}, MY_PERMISSIONS_REQUEST_CAMERA);
@@ -96,10 +96,9 @@ public class facialExpressionActivity extends Activity implements CameraBridgeVi
             }
         });
 
-        // this will load cascade classifier and model
-        // this only happen one time when you start CameraActivity
+
         try{
-            // input size of model is 48
+
             int inputSize=48;
             facialExpressionClass=new facialExpressionClass(getAssets(),facialExpressionActivity.this,
                     "facial_expression_model.tflite",inputSize);
@@ -123,12 +122,12 @@ public class facialExpressionActivity extends Activity implements CameraBridgeVi
     protected void onResume() {
         super.onResume();
         if (OpenCVLoader.initDebug()){
-            //if load success
+
             Log.d(TAG,"Opencv initialization is done");
             mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
         }
         else{
-            //if not loaded
+
             Log.d(TAG,"Opencv is not loaded. try again");
             OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_4_0,this,mLoaderCallback);
         }

@@ -236,12 +236,12 @@ public class imageToTextActivity extends Activity implements CameraBridgeViewBas
     protected void onResume() {
         super.onResume();
         if (OpenCVLoader.initDebug()){
-            //if load success
+
             Log.d(TAG,"Opencv initialization is done");
             mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
         }
         else{
-            //if not loaded
+
             Log.d(TAG,"Opencv is not loaded. try again");
             OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_4_0,this,mLoaderCallback);
         }

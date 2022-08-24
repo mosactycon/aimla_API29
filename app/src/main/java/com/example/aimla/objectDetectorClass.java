@@ -157,9 +157,7 @@ public class objectDetectorClass {
         float[][][]boxes =new float[1][10][4];
         float[][] scores=new float[1][10];
         float[][] classes=new float[1][10];
-//        float[][] boxes =new float[1][25];
-//        float[][] scores=new float[1][25];
-//        float[][] classes=new float[1][25];
+
 
         output_map.put(0,boxes);
         output_map.put(1,classes);
@@ -183,10 +181,9 @@ public class objectDetectorClass {
                 float bottom=(float) Array.get(box1,2)*height;
                 float right=(float) Array.get(box1,3)*width;
                 final_text=labelList.get(((int)class_value));
-                // draw rectangle in Original frame //  starting point    // ending point of box  // color of box       thickness
+
                 Imgproc.rectangle(rotated_mat_image,new Point(left,top),new Point(right,bottom),new Scalar(0,255,0,255),2);
-                // write text on frame
-                // string of class name of object  // starting point                         // color of text           // size of text
+
                 Imgproc.putText(rotated_mat_image,labelList.get((int) class_value),new Point(left,bottom),3,1,new Scalar(0,255,0,255),2);
             }
 
@@ -221,7 +218,7 @@ public class objectDetectorClass {
                     byteBuffer.put((byte) (val&0xFF));
                 }
                 else {
-                    // paste this
+
                     byteBuffer.putFloat((((val >> 16) & 0xFF))/255.0f);
                     byteBuffer.putFloat((((val >> 8) & 0xFF))/255.0f);
                     byteBuffer.putFloat((((val) & 0xFF))/255.0f);

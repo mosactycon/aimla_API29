@@ -63,7 +63,7 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         int MY_PERMISSIONS_REQUEST_CAMERA=0;
-        // if camera permission is not given it will ask for it on device
+
         if (ContextCompat.checkSelfPermission(objectDetectorActivity.this, Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_DENIED){
             ActivityCompat.requestPermissions(objectDetectorActivity.this, new String[] {Manifest.permission.CAMERA}, MY_PERMISSIONS_REQUEST_CAMERA);
@@ -79,7 +79,7 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
         language_indo=findViewById(R.id.language_indo);
 
         try{
-            // input size is 300 for this model
+
             objectDetectorClass=new objectDetectorClass(objectDetectorActivity.this,text_speech_button,language_english,language_indo, getAssets(), "ssd_mobilenet.tflite","labelmap.txt", "labelmap_arab.txt","labelmap_indo.txt",300);
             Log.d("MainActivity","Model is successfully loaded");
         }
@@ -93,12 +93,12 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
     protected void onResume() {
         super.onResume();
         if (OpenCVLoader.initDebug()){
-            //if load success
+
             Log.d(TAG,"Opencv initialization is done");
             mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
         }
         else{
-            //if not loaded
+
             Log.d(TAG,"Opencv is not loaded. try again");
             OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_4_0,this,mLoaderCallback);
         }
@@ -130,13 +130,11 @@ public class objectDetectorActivity extends Activity implements CameraBridgeView
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame){
         mRgba=inputFrame.rgba();
         mGray=inputFrame.gray();
-        // Before watching this video please watch previous video of loading tensorflow lite model
 
-        // now call that function
         Mat out=new Mat();
         out=objectDetectorClass.recognizeImage(mRgba);
 
         return out;
-//        return mRgba;
+
     }
 }

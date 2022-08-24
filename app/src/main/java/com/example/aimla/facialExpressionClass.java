@@ -42,7 +42,7 @@ public class facialExpressionClass {
         INPUT_SIZE=inputSize;
         Interpreter.Options options=new Interpreter.Options();
         gpuDelegate=new GpuDelegate();
-//        options.addDelegate(gpuDelegate);
+
         options.setNumThreads(4);
         interpreter=new Interpreter(loadModelFile(assetManager,modelPath),options);
 
@@ -81,10 +81,10 @@ public class facialExpressionClass {
         int absoluteFaceSize=(int)(height*0.1);
         MatOfRect faces=new MatOfRect();
         if(cascadeClassifier !=null){
-            //                                  input         output
+
             cascadeClassifier.detectMultiScale(grayscaleImage,faces,1.1,2,2,
                     new Size(absoluteFaceSize,absoluteFaceSize),new Size());
-            // minimum size
+
         }
 
         Rect[] faceArray=faces.toArray();
