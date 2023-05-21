@@ -1,8 +1,11 @@
 package com.example.aimla;
 
+import android.content.ActivityNotFoundException;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -30,6 +33,7 @@ public class codeScannerActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+
         setContentView(R.layout.activity_code_scanner);
         CodeScannerView scannerView = findViewById(R.id.scanner_view);
         text_view=findViewById(R.id.text_view);
@@ -50,6 +54,11 @@ public class codeScannerActivity extends AppCompatActivity {
                                 Toast.LENGTH_LONG).show();
 
                         text_view.setText(result.getText());
+                        String sAppLink = result.getText();
+                        String sPackage = result.getText();
+
+                        openLink(sAppLink,sPackage,sAppLink);
+
                     }
                 });
             }
@@ -60,6 +69,23 @@ public class codeScannerActivity extends AppCompatActivity {
                 codeScanner.startPreview();
             }
         });
+    }
+
+    private void openLink(String sAppLink, String sPackage, String sWebLink) {
+        try {
+            Uri uri = Uri.parse(sAppLink);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(uri);
+            intent.setPackage(sPackage);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }catch (ActivityNotFoundException activityNotFoundException){
+            Uri uri = Uri.parse(sWebLink);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(uri);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
     }
 
     @Override

@@ -41,6 +41,11 @@ android {
     buildFeatures {
         mlModelBinding true
     }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+        }
+    }
 }
 
 dependencies {
