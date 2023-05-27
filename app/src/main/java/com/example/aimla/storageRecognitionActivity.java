@@ -1,4 +1,4 @@
-package com.example.RealTimeObjectTranslatorYOLOV7;
+package com.example.aimla;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

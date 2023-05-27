@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.RealTimeObjectTranslatorYOLOV7">
+    package="com.example.aimla">
 
     <uses-feature
         android:name="android.hardware.camera.front"
@@ -28,12 +28,12 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RealTimeObjectTranslatorYOLOV7">
+        android:theme="@style/Theme.aimla">
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.aboutActivity"
+            android:name="com.example.aimla.aboutActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.splashScreen">
+            android:name="com.example.aimla.splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,29 +41,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.faceRecognitionActivity"
+            android:name="com.example.aimla.faceRecognitionActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.facialExpressionActivity"
+            android:name="com.example.aimla.facialExpressionActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.storageRecognitionActivity"
+            android:name="com.example.aimla.storageRecognitionActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.imageToTextActivity"
+            android:name="com.example.aimla.imageToTextActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.signLanguageActivity"
+            android:name="com.example.aimla.signLanguageActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.GalleryActivity"
+            android:name="com.example.aimla.GalleryActivity"
             android:exported="true" />
-        <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.CameraActivity" />
-        <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.objectDetectorActivity" />
+        <activity android:name="com.example.aimla.CameraActivity" />
+        <activity android:name="com.example.aimla.objectDetectorActivity" />
         <activity
-            android:name="com.example.RealTimeObjectTranslatorYOLOV7.codeScannerActivity"
+            android:name="com.example.aimla.codeScannerActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.MainActivity"></activity>
+        <activity android:name="com.example.aimla.MainActivity"></activity>
     </application>
 
 </manifest>

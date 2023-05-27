@@ -1,4 +1,4 @@
 include ':app'
-rootProject.name = "RealTimeObjectTranslatorYOLOV7"
+rootProject.name = "aimla"
 include ':openCVLibrary3413'
 

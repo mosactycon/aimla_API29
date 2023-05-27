@@ -1,4 +1,4 @@
-package com.example.RealTimeObjectTranslatorYOLOV7;
+package com.example.aimla;
 
 import android.content.Context;
 
