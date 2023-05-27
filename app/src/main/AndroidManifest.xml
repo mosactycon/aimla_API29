@@ -41,13 +41,28 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.faceRecognitionActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.facialExpressionActivity"
+            android:exported="true" />
+        <activity
             android:name="com.example.RealTimeObjectTranslatorYOLOV7.storageRecognitionActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.imageToTextActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.signLanguageActivity"
             android:exported="true" />
         <activity
             android:name="com.example.RealTimeObjectTranslatorYOLOV7.GalleryActivity"
             android:exported="true" />
         <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.CameraActivity" />
         <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.objectDetectorActivity" />
+        <activity
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.codeScannerActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.MainActivity"></activity>
     </application>
 
