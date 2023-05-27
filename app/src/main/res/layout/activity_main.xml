@@ -55,85 +55,85 @@
             android:elevation="10dp" />
     </LinearLayout>
 
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="-30dp"-->
+
+<!--        >-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/face_recognition_button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:src="@drawable/face_recognition_icon"-->
+<!--            android:background="@drawable/custom_image_button"-->
+<!--            android:elevation="10dp"-->
+<!--            />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/sign_language_button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:src="@drawable/sign_language_icon"-->
+<!--            android:background="@drawable/custom_image_button"-->
+<!--            android:elevation="10dp"-->
+<!--            />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/facial_expression_button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:src="@drawable/facial_expression_icon"-->
+<!--            android:background="@drawable/custom_image_button"-->
+<!--            android:elevation="10dp"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="115dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:text="AimlaFace" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:text="AimlaSign"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:text="AimlaEmote"/>-->
+
+<!--    </LinearLayout>-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="-30dp"
-
-        >
-        <ImageButton
-            android:id="@+id/face_recognition_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:src="@drawable/face_recognition_icon"
-            android:background="@drawable/custom_image_button"
-            android:elevation="10dp"
-            />
-
-        <ImageButton
-            android:id="@+id/sign_language_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:src="@drawable/sign_language_icon"
-            android:background="@drawable/custom_image_button"
-            android:elevation="10dp"
-            />
-
-        <ImageButton
-            android:id="@+id/facial_expression_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:src="@drawable/facial_expression_icon"
-            android:background="@drawable/custom_image_button"
-            android:elevation="10dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="115dp"
-
-        >
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:textAlignment="center"
-            android:text="AimlaFace" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:textAlignment="center"
-            android:text="AimlaSign"/>
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:textAlignment="center"
-            android:text="AimlaEmote"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="100dp"
 
         >
         <ImageButton
@@ -147,26 +147,26 @@
             />
 
 
-        <ImageButton
-            android:id="@+id/code_scanner_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:src="@drawable/code_scanner_icon"
-            android:background="@drawable/custom_image_button"
-            android:elevation="10dp"
+<!--        <ImageButton-->
+<!--            android:id="@+id/code_scanner_button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:src="@drawable/code_scanner_icon"-->
+<!--            android:background="@drawable/custom_image_button"-->
+<!--            android:elevation="10dp"-->
 
-            />
-        <ImageButton
-            android:id="@+id/image_to_text_button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="15dp"
-            android:src="@drawable/image_totext_icon"
-            android:background="@drawable/custom_image_button"
-            android:elevation="10dp"
+<!--            />-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/image_to_text_button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:src="@drawable/image_totext_icon"-->
+<!--            android:background="@drawable/custom_image_button"-->
+<!--            android:elevation="10dp"-->
 
-            />
+<!--            />-->
 
 
     </LinearLayout>
@@ -177,7 +177,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="240dp"
 
         >
         <TextView
@@ -187,19 +187,19 @@
             android:textAlignment="center"
             android:text="AimlaObj"/>
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:textAlignment="center"
-            android:text="AimlaCodes"/>
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:text="AimlaCodes"/>-->
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:textAlignment="center"
-            android:text="AimlaMagtext" />
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:text="AimlaMagtext" />-->
 
     </LinearLayout>
 
