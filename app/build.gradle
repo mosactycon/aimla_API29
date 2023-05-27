@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId 'com.example.aimla'
+        applicationId 'com.example.RealTimeObjectTranslatorYOLOV7'
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aimla">
+    package="com.example.RealTimeObjectTranslatorYOLOV7">
 
     <uses-feature
         android:name="android.hardware.camera.front"
@@ -28,12 +28,12 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.aimla">
+        android:theme="@style/Theme.RealTimeObjectTranslatorYOLOV7">
         <activity
-            android:name=".aboutActivity"
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.aboutActivity"
             android:exported="true" />
         <activity
-            android:name=".splashScreen">
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,29 +41,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".faceRecognitionActivity"
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.storageRecognitionActivity"
             android:exported="true" />
         <activity
-            android:name=".facialExpressionActivity"
+            android:name="com.example.RealTimeObjectTranslatorYOLOV7.GalleryActivity"
             android:exported="true" />
-        <activity
-            android:name=".storageRecognitionActivity"
-            android:exported="true" />
-        <activity
-            android:name=".imageToTextActivity"
-            android:exported="true" />
-        <activity
-            android:name=".signLanguageActivity"
-            android:exported="true" />
-        <activity
-            android:name=".GalleryActivity"
-            android:exported="true" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".objectDetectorActivity" />
-        <activity
-            android:name=".codeScannerActivity"
-            android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.CameraActivity" />
+        <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.objectDetectorActivity" />
+        <activity android:name="com.example.RealTimeObjectTranslatorYOLOV7.MainActivity"></activity>
     </application>
 
 </manifest>
