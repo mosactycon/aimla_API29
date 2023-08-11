@@ -2,15 +2,15 @@ orang
 sepeda
 mobil
 motor
-pesawat
-bis
+pesawat terbang
+bus
 kereta api
 truk
 kapal
 lampu lalu lintas
-pemadam kebakaran
+hidran kebakaran
 ???
-tanda stop
+tanda berhenti
 meteran parkir
 bangku
 burung
@@ -31,19 +31,19 @@ payung
 tas tangan
 dasi
 koper
-frisbee
+piring terbang
 ski
-papan seluncur
-bola
+papan seluncur salju
+bola olahraga
 layang-layang
-tongkat baseball
-sarung baseball
-papan skateboard
+tongkat bisbol
+sarung tangan bisbol
 papan luncur
+papan selancar
 raket tenis
 botol
 ???
-gelas kaca
+gelas anggur
 cangkir
 garpu
 pisau
@@ -51,7 +51,7 @@ sendok
 mangkuk
 pisang
 apel
-sandwich
+roti lapis
 jeruk
 brokoli
 wortel
@@ -59,22 +59,22 @@ hot dog
 pizza
 donat
 kue
-bangku
+kursi
 sofa
 tanaman pot
-kasur
+tempat tidur
 ???
 meja makan
 ???
 ???
 toilet
 ???
-tv
-laptop
-mouse
+televisi
+komputer jinjing
+tetikus
 remote
-keyboard
-telepon genggam
+papan ketik
+telepon seluler
 microwave
 oven
 pemanggang roti
@@ -85,6 +85,6 @@ buku
 jam
 vas bunga
 gunting
-boneka beruang
+beruang teddy
 pengering rambut
 sikat gigi

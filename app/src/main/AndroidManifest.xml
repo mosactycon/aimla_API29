@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aimla">
+    package="com.example.aimtect">
 
     <uses-feature
         android:name="android.hardware.camera.front"
@@ -28,12 +28,12 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.aimla">
+        android:theme="@style/Theme.aimtect">
         <activity
-            android:name="com.example.aimla.aboutActivity"
+            android:name="com.example.aimtect.aboutActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.aimla.splashScreen">
+            android:name="com.example.aimtect.splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,29 +41,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.aimla.faceRecognitionActivity"
+            android:name="com.example.aimtect.faceRecognitionActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.aimla.facialExpressionActivity"
+            android:name="com.example.aimtect.facialExpressionActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.aimla.storageRecognitionActivity"
+            android:name="com.example.aimtect.storageRecognitionActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.aimla.imageToTextActivity"
+            android:name="com.example.aimtect.imageToTextActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.aimla.signLanguageActivity"
+            android:name="com.example.aimtect.signLanguageActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.aimla.GalleryActivity"
+            android:name="com.example.aimtect.GalleryActivity"
             android:exported="true" />
-        <activity android:name="com.example.aimla.CameraActivity" />
-        <activity android:name="com.example.aimla.objectDetectorActivity" />
+        <activity android:name="com.example.aimtect.CameraActivity" />
+        <activity android:name="com.example.aimtect.objectDetectorActivity" />
         <activity
-            android:name="com.example.aimla.codeScannerActivity"
+            android:name="com.example.aimtect.codeScannerActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name="com.example.aimla.MainActivity"></activity>
+        <activity android:name="com.example.aimtect.MainActivity"></activity>
     </application>
 
 </manifest>
