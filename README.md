@@ -1,6 +1,6 @@
 # aimla_API29
 
-You can see full documentation of this project through this link : https://khaddavi.net/3LZMB1DpRq
+You can see full documentation of this project through this link : https://link.bicolink.net/KV9
 
 Lampiran 3 Output Program
 1. Output tampilan utama aplikasi AIMLA laman Beranda
