@@ -1,5 +1,12 @@
 # aimla_API29
 
+**AIMLA**
+
+An Android application designed to facilitate the use of machine learning features. These features include face recognition, object recognition, sign language translation, expression recognition, image to text converter, and QR code scanner. All features are integrated into a single application. Each feature can be easily used by capturing moving images in real-time through the device's camera, which are then automatically processed to produce output in the form of bounding boxes and label text that indicates the meaning of the captured image. Three out of the seven machine learning models are produced independently, achieving an accuracy of 90.84% for face recognition, 90.47% for sign language translation, and 90.78% for expression recognition.
+
+AIMLA
+Sebuah aplikasi android untuk memudahkan penggunaan fitur-fitur machine learning. Fitur-fitur tersebut yakni face recognition, object recognition, sign language translation, expression recognition, image to text converter, dan qrcode scanner. Seluruh fitur terintegrasi dalam satu aplikasi. Masing-masing fitur dapat dengan mudah digunakan dengan cara menangkap citra bergerak secara real-time melalui kamera device yang diproses secara otomatis yang kemudian menghasilkan output berupa bounding box dan label text yang menyatakan makna dari citra yang ditangkap. Tiga diantara ketujuh model machine learning diproduksi secara mandiri yang mencapai akurasi 90.84% pada face recognition, akurasi 90.47% pada sign language translation, dan akurasi 90.78% pada expression recognition.
+
 You can see full documentation of this project through this link : https://link.bicolink.net/CgmMzlA
 
 Lampiran 3 Output Program
