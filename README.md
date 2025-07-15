@@ -14,6 +14,8 @@ Lampiran 3 Output Program
 
 <img src="https://github.com/mosactycon/aimla_API29/assets/68953244/b9b66eea-b35d-4969-ae4c-a869dbce6339" alt="Output tampilan utama aplikasi AIMLA laman Beranda" width="250"/>
 <img src="https://github.com/mosactycon/aimla_API29/assets/68953244/37df929a-005c-48ae-be84-3e1faf3bf47b" alt="Output tampilan utama aplikasi AIMLA laman Beranda" width="250"/>
+<img src="https://github.com/mosactycon/aimla_API29/assets/68953244/b1f9c180-b2cb-483d-bbdb-c0b8e9ea8a35" alt="Output tampilan utama aplikasi AIMLA laman Tentang" width="250"/>
+<img src="https://github.com/mosactycon/aimla_API29/assets/68953244/064250a6-50ae-48cd-b903-09a33d5c3363" alt="Output tampilan utama aplikasi AIMLA laman Tentang" width="250"/>
 
 2. Output tampilan utama aplikasi AIMLA laman Tentang
 
